@@ -23,7 +23,11 @@ bootstrap → infrastructure → domain / application
 
 ## 快速启动
 
+需 **JDK 21**（仅当前终端设置 `JAVA_HOME`，不改 shell 配置）：
+
 ```bash
+export JAVA_HOME=/home/charlie/Workspace/sdks/jdk-21
+export PATH="$JAVA_HOME/bin:$PATH"
 mvn install -DskipTests
 mvn -pl bootstrap spring-boot:run
 ```
@@ -64,8 +68,8 @@ public R<Void> xxx() { ... }
 
 | 能力 | 依赖示例 | 开关 |
 |------|----------|------|
-| 数据源 | `druid-spring-boot-3-starter` + 驱动 | `hei.ddd.datasource.enabled` |
-| MyBatis-Plus | `mybatis-plus-spring-boot3-starter` | `hei.ddd.mybatis.enabled` |
+| 数据源 | `druid-spring-boot-4-starter` + 驱动 | `hei.ddd.datasource.enabled` |
+| MyBatis-Plus | `mybatis-plus-spring-boot4-starter` | `hei.ddd.mybatis.enabled` |
 | Redis | `spring-boot-starter-data-redis` | `hei.ddd.redis.enabled` |
 | JWT | 已内置于 `interfaces`（jjwt） | `hei.ddd.jwt.enabled` |
 | MinIO | `minio` | `hei.ddd.minio.enabled` |
@@ -79,5 +83,6 @@ public R<Void> xxx() { ... }
 
 ## 技术栈
 
-- Java 17 / Spring Boot 3.4.x / Maven 多模块
+- Java 21 / Spring Boot 4.1.x / Maven 多模块
 - Lombok / Hutool / MapStruct / JJWT
+- Druid / MyBatis-Plus / Redis / MinIO（可选）

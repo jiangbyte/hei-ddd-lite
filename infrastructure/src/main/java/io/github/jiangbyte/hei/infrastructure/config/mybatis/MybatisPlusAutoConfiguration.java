@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 /**
  * MyBatis-Plus 自动配置：分页插件与创建/更新时间元数据填充。
  * <p>
- * 需引入 mybatis-plus-spring-boot3-starter，并通过 hei.ddd.mybatis.enabled 控制（默认 true）。
+ * 需引入 mybatis-plus-spring-boot4-starter，并通过 hei.ddd.mybatis.enabled 控制（默认 true）。
  */
 @AutoConfiguration
 @ConditionalOnClass(name = "com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor")
