@@ -64,13 +64,13 @@ public R<Void> xxx() { ... }
 
 | 能力 | 依赖示例 | 开关 |
 |------|----------|------|
-| 数据源 | `spring-boot-starter-jdbc` + 驱动 | `hei.ddd.datasource.enabled` |
+| 数据源 | `druid-spring-boot-3-starter` + 驱动 | `hei.ddd.datasource.enabled` |
 | MyBatis-Plus | `mybatis-plus-spring-boot3-starter` | `hei.ddd.mybatis.enabled` |
 | Redis | `spring-boot-starter-data-redis` | `hei.ddd.redis.enabled` |
 | JWT | 已内置于 `interfaces`（jjwt） | `hei.ddd.jwt.enabled` |
 | MinIO | `minio` | `hei.ddd.minio.enabled` |
 
-版本在父 POM 的 `<properties>` 中用 `${xxx.version}` 统一管理（如 `lombok.version`、`hutool.version`、`mapstruct.version`、`jjwt.version`、`mybatis-plus.version`、`minio.version`）。
+版本在父 POM 的 `<properties>` 中用 `${xxx.version}` 统一管理（如 `lombok.version`、`hutool.version`、`mapstruct.version`、`jjwt.version`、`mybatis-plus.version`、`druid.version`、`minio.version`）。
 
 ## 与完整 DDD 的差异
 

@@ -39,8 +39,8 @@
 
         <!-- 以下均为可选：引入后由条件自动配置生效 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-3-starter</artifactId>
             <optional>true</optional>
         </dependency>
         <dependency>
