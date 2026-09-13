@@ -13,7 +13,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
         "io.github.jiangbyte.hei.bootstrap",
         "io.github.jiangbyte.hei.interfaces",
         "io.github.jiangbyte.hei.application",
-        "io.github.jiangbyte.hei.infrastructure.persistence"
+        "io.github.jiangbyte.hei.infrastructure.persistence",
+        "io.github.jiangbyte.hei.infrastructure.event",
+        "io.github.jiangbyte.hei.infrastructure.tx"
 })
 public class HeiDddLiteApplication {
 

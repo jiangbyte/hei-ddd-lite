@@ -16,7 +16,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>hei-ddd-lite</name>
-    <description>轻量 DDD-lite 单体骨架：分层约定 + 可选基础设施</description>
+    <description>最基础 DDD 单体模板脚手架：完整核心抽象 + 分层约定 + 可选基础设施</description>
 
     <modules>
         <module>domain</module>
