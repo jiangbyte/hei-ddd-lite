@@ -39,3 +39,10 @@ build/
 .DS_Store
 /.mvn/
 /.idea/
+
+### Frontend (web/) ###
+web/**/node_modules/
+web/**/dist/
+web/**/.vite/
+web/.pnpm-store/
+web/**/*.local

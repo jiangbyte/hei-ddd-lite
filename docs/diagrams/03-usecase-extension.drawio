@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" agent="hei-ddd-lite" version="22.1.0">
+<mxfile host="app.diagrams.net" agent="hei-ddd-ai-lite" version="22.1.0">
   <diagram id="extend" name="用例扩展">
     <mxGraphModel dx="1400" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="500" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="t" value="基于脚手架新增用例（复制 Hello 竖切）" style="text;html=1;fontSize=16;fontStyle=1;align=center;" vertex="1" parent="1">
+        <mxCell id="t" value="基于脚手架新增用例（复制用户管理竖切）" style="text;html=1;fontSize=16;fontStyle=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="420" y="20" width="420" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="s1" value="1&#xa;领域模型&#xa;model" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">

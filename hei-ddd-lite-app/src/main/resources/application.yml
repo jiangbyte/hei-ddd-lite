@@ -1,0 +1,124 @@
+server:
+  # 服务端口
+  port: 8080
+  # servlet:
+  #   context-path: /api
+
+spring:
+  application:
+    name: hei-ddd-lite
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/hei?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: infra123!
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      filters: stat,wall
+
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password: infra123!
+      database: 0
+      timeout: 3s
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: io.github.jiangbyte.hei.infrastructure.persistence
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+# 基础设施与安全开关
+hei:
+  ddd:
+    # Druid 数据源约定开关
+    datasource:
+      enabled: true
+    # MyBatis-Plus：分页、元数据填充
+    mybatis:
+      enabled: true
+    # Redis：RedisTemplate 序列化约定
+    redis:
+      enabled: true
+    # CORS 跨域
+    cors:
+      enabled: true
+      allowed-origins:
+        - "*"
+      allowed-headers:
+        - "*"
+      allowed-methods:
+        - GET
+        - POST
+        - PUT
+        - DELETE
+        - PATCH
+        - OPTIONS
+      allow-credentials: false
+      max-age: 3600
+    # 自实现 JWT 登录校验（配合 @RequireLogin / @RequireAdmin）
+    jwt:
+      enabled: true
+      secret: hei-ddd-lite-jwt-secret-change-me-32bytes!!
+      expire-seconds: 7200
+      header: Authorization
+      token-prefix: "Bearer "
+      issuer: hei-ddd-lite
+    # MinIO 对象存储（可选；未引入 minio 依赖时不会生效）
+    minio:
+      enabled: false
+      endpoint: http://127.0.0.1:9000
+      access-key: minioadmin
+      secret-key: minioadmin
+      bucket: hei
+      create-bucket-if-absent: false
+
+# Knife4j / springdoc（Boot4 专用 starter）
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  group-configs:
+    - group: default
+      paths-to-match: /**
+      packages-to-scan: io.github.jiangbyte.hei.trigger.web
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+    enable-swagger-models: true
+    enable-document-manage: true
+
+# 日志（按需调整）
+# logging:
+#   level:
+#     root: INFO
+#     io.github.jiangbyte.hei: DEBUG
