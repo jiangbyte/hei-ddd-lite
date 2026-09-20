@@ -35,7 +35,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>io.github.jiangbyte.hei.app.HeiDddLiteApplication</mainClass>
+                    <mainClass>io.github.jiangbyte.hei.HeiDddLiteApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
